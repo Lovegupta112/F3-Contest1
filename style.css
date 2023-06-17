@@ -66,6 +66,7 @@ input:focus {
 }
 .message-section .error {
   color: #ff4343;
+  transition:all 3s ease-in-out;
 }
 .message-section .success {
   color: #43ff78;

@@ -33,6 +33,10 @@ function failed() {
   message.className = "error";
   messageSection.innerHTML = "";
   messageSection.append(message);
+  setTimeout(()=>{
+    messageSection.innerHTML = "";
+  },5000);
+
 }
 
 // ---if the employee data is successfully added !--------
@@ -42,6 +46,10 @@ function success() {
   message.className = "success";
   messageSection.innerHTML = "";
   messageSection.append(message);
+  setTimeout(()=>{
+    messageSection.innerHTML = "";
+  },3000);
+
 }
 
 // ------for updating the listof Employees------------------
