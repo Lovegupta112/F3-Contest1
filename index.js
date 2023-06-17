@@ -9,6 +9,10 @@ function addUser() {
   let profession = inputs[1].value;
   let age = inputs[2].value;
 
+  inputs[0].value="";
+  inputs[1].value="";
+  inputs[2].value="";
+  // if()
   if (name && profession && age) {
     let ob = {
       id: id++,
@@ -61,10 +65,10 @@ function updateEmployeeList() {
     employees.innerHTML += `
        <div class="employee-details" id="user-${employee.id}">
         <section class="details">
-        <span>${employee.id}.</span>
-        <span >Name: ${employee.name}</span>
-        <span>Profession: ${employee.profession}</span>
-        <span>Age:${employee.age}</span>
+        <span>${employee.id}.&nbsp;</span>
+        <span >Name: ${employee.name}&nbsp;</span>
+        <span>Profession: ${employee.profession}&nbsp;</span>
+        <span>Age:${employee.age}&nbsp;</span>
     </section>
     <button class="delete-user" onclick="deleteUser(event)">Delete User</button>
     </div> 
@@ -95,6 +99,7 @@ function deleteUser(event) {
   for (let i = removeIndex; i < employeesArr.length; i++) {
     employeesArr[i].id = i + 1;
   }
-  id = employeesArr[employeesArr.length - 1].id + 1;
+
+  id = employeesArr.length>0?(employeesArr[employeesArr.length - 1].id + 1):1;
   updateEmployeeList();
 }

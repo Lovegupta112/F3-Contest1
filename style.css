@@ -66,7 +66,7 @@ input:focus {
 }
 .message-section .error {
   color: #ff4343;
-  transition:all 3s ease-in-out;
+  
 }
 .message-section .success {
   color: #43ff78;
@@ -98,11 +98,12 @@ input:focus {
   display: flex;
   justify-content: space-evenly;
   border-radius: 10px;
+  padding: 0 0.5rem;
 }
 
 /*----- if name is long -------*/
 .details span:nth-child(2) {
-  width: 155px;
+  width: 145px;
   line-height: 1.5;
   align-items: center;
   display: flex;
